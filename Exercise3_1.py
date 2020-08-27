@@ -23,10 +23,9 @@ df_pca = pd.DataFrame(pca.components_,columns=df_oly.columns)
 
 import matplotlib.pyplot as plt
 var = pd.DataFrame(pca.explained_variance_ratio_, columns=['Explained Variance'])
-var.index.name = 'Principal Component'
 import numpy as np
 var['Cum.Explained Variance'] = np.cumsum(var)
 var.plot(kind='bar')
 plt.show()
 
-# For atleast 90% vaiance we need 6 components.
+# For atleast 90% vaiance we need 7 components.
