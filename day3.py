@@ -19,7 +19,7 @@ import seaborn as sns
 sns.heatmap(df, xticklabels=boston['feature_names'])
 import matplotlib.pyplot as plt
 plt.show()
-# careful, there is variance domination. ZN, INDUS, CRIm have high variabnce and therefor ethey seem to be more important.
+# careful, there is variance domination. ZN, INDUS, CRIm have high variance and therefore they seem to be more important.
 df = pd.DataFrame(x, columns=boston['feature_names'])
 df.describe()
 # so to get rid of var domination e need to scale the data
