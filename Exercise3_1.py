@@ -17,9 +17,9 @@ from sklearn.decomposition import PCA
 pca=PCA()
 pca = PCA(random_state=0).fit(x_scaled)
 df_pca = pd.DataFrame(pca.components_,columns=df_oly.columns)
-# 110 is more prominent is first components
-# disq in the second
-# haut in the third
+# 110 is more prominent is first components --> running events
+# disq in the second --> Strength events
+# haut in the third -->  High jump
 
 import matplotlib.pyplot as plt
 var = pd.DataFrame(pca.explained_variance_ratio_, columns=['Explained Variance'])
